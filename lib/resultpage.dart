@@ -17,7 +17,7 @@ class _ResultPageState extends State<ResultPage> {
   Map wordData;
   fetchData() async {
     http.Response response = await http.get("https://owlbot.info/api/v4/dictionary/"+widget.title,
-        headers: {HttpHeaders.authorizationHeader : "Token b25a09cf58706e42af42643d4a89bc333d0196a7"});
+        headers: {HttpHeaders.authorizationHeader : "{YOUR_API_KEY}"});
     setState(() {
       wordData = jsonDecode(response.body);
     });
